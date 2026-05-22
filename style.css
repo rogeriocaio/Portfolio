@@ -1,0 +1,351 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe Ui", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.7;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  background-color: #1a202c;
+  padding: 1rem 2rem;
+  z-index: 100;
+  box-shadow: 0 0 8px 1px #1a202c;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+nav ul li a {
+  color: #e2e8f0;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  transition: color 0.2s;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+nav ul li a:hover {
+  color: #63b3ed;
+}
+/* ======= Geral ======= */
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  color: #2b6cb0;
+  font-weight: 700;
+  border-left: 5px solid #63b3ed;
+  padding-left: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+h3.subtitulo {
+  font-size: 1.1rem;
+  color: #4a5568;
+  font-weight: 600;
+  margin: 0.4rem 0 0.4rem;
+  text-align: center;
+}
+
+.lista-habilidades {
+  padding-left: 1rem;
+  color: #4a5568;
+  margin: 0 0 1rem 0;
+  list-style: none;
+}
+
+.badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+/* ========= HEADER ========= */
+
+#inicio {
+  background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+  color: white;
+  text-align: center;
+  padding: 5rem 2rem;
+}
+
+#inicio h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  color: #90cdf4;
+}
+
+#inicio h2 {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #a0aec0;
+  margin-bottom: 1.5rem;
+}
+
+.foto-perfil {
+  border-radius: 50%;
+  border: 4px solid #63b3ed;
+}
+
+/* ======== SOBRE MIN ======== */
+main section {
+  padding: 3.5rem 0;
+}
+
+main section:nth-child(odd) {
+  background-color: #f0f4f8;
+}
+
+#sobre p {
+  margin-bottom: 0.8rem;
+  text-align: justify;
+}
+
+#sobre a {
+  color: #2b6cb0;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+#sobre a:hover {
+  text-decoration: none;
+}
+
+/* ======== HABILIDADES ======== */
+
+#habilidades .skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+#habilidades .card {
+  border: 2px solid #cbd5e0;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+#habilidades .card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
+  border-color: #63b3ed;
+}
+
+#habilidades .card-cor {
+  grid-column: 1 / -1;
+  background: linear-gradient(135deg, white 25%, #ebf8ff 100%);
+}
+
+#habilidades .card ul li::before {
+  content: "✦ ";
+  color: #2b6cb0;
+}
+
+/* ======== EXPERIENCIA ======== */
+
+#experiencia .linha-do-tempo {
+  padding-left: 2rem;
+  position: relative;
+}
+
+#experiencia .linha-do-tempo::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: #bee3f8;
+  border-radius: 3px;
+}
+
+#experiencia ol .linha-item {
+  display: flex;
+  gap: 1.5rem;
+  padding-bottom: 40px;
+  position: relative;
+}
+
+#experiencia ol .linha-item::before {
+  content: "";
+  position: absolute;
+  left: -40px;
+  top: 0.35rem;
+  width: 14px;
+  height: 14px;
+  background-color: #2b6cb0;
+  border-radius: 50%;
+  border: 3px solid #ebf8ff;
+  box-shadow: 0 0 0 2px #2b6cb0;
+  transition: all 0.3s;
+}
+
+#experiencia ol .linha-item:hover::before {
+  transform: scale(1.4);
+}
+
+#experiencia .subtitulo {
+  color: #1a202c;
+  font-weight: 700;
+}
+
+#experiencia .empresa {
+  margin-bottom: 0.5rem;
+}
+
+#experiencia p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+#experiencia em {
+  color: #4a5568;
+  font-size: 0.95rem;
+}
+
+#experiencia li {
+  list-style: none;
+}
+
+#experiencia .linha-data {
+  min-width: 130px;
+  padding-top: 1px;
+}
+
+#experiencia .linha-conteudo {
+  padding-left: 1.5rem;
+  flex: 1;
+  transition: all 0.4s;
+  border-radius: 12px;
+}
+
+#experiencia .linha-conteudo:hover {
+  background-color: #e2e8f0;
+}
+
+#experiencia .subtitulo {
+  text-align: start;
+}
+
+/* ======== PROJETOS ======== */
+
+#projetos table {
+  border-collapse: collapse;
+}
+
+#projetos th,
+#projetos td {
+  border-bottom: 0.5px solid #cbd5e0;
+  padding: 12px 16px;
+  text-align: left;
+}
+
+#projetos tbody tr {
+  transition: background-color 0.15s;
+}
+
+#projetos tbody tr:hover {
+  background-color: #f0f4f8;
+}
+
+#projetos tbody td:not(:nth-child(2n + 1)) {
+  white-space: nowrap;
+}
+
+#projetos tbody td div {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #185fa5;
+  transition: all 0.2s;
+}
+
+#projetos tbody td div:hover {
+  transform: scale(1.1);
+  color: #0d74db;
+}
+
+#projetos thead th {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: #4a5568;
+}
+
+#projetos .tarefa {
+  padding: 0.2rem 0.6rem;
+  font-weight: 700;
+  font-size: 0.8rem;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+#projetos .tarefa--concluida {
+  background-color: #eaf3de;
+  color: #3b6d11;
+}
+
+#projetos .dot-green {
+  background: #639922;
+}
+
+#projetos .dot-amber {
+  background-color: #ba7517;
+}
+
+#projetos .tarefa--andamento {
+  background-color: #faeeda;
+  color: #854f0b;
+}
+
+#projetos a {
+  color: #195c9d;
+}
+
+/* ======== CONTATO ======== */
+
+footer div {
+  background-color: #1a202c;
+  padding: 1rem 2rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+
+footer div a {
+  color: #e2e8f0;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+footer div a:hover {
+  color: #ffffff;
+  transform: translateY(-2px);
+}
