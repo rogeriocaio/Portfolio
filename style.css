@@ -5,6 +5,76 @@
   font-family: "Segoe Ui", sans-serif;
 }
 
+/* ======== RESPONSIVO ======== */
+@media (max-width: 768px) {
+  section .container {
+    padding: 0 1.5rem;
+  }
+
+  main section:last-child {
+    padding: 3.5rem 0 1rem;
+  }
+
+  nav {
+    display: none;
+  }
+
+  #experiencia ol .linha-item {
+    flex-direction: column;
+  }
+
+  #experiencia .linha-conteudo {
+    text-align: justify;
+  }
+
+  #habilidades .skills-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* ======= PROJETOS MOBILE ====== */
+  #projetos table {
+    display: none;
+  }
+
+  #projetos .projetos-mobile {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  #projetos .mobile-card {
+    border: 1px solid #185fa5;
+    border-radius: 16px;
+    padding: 1rem;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  }
+
+  #projetos .mobile-card:hover {
+    background-color: #f0f4f8;
+  }
+
+  #projetos .mob-card-header {
+    display: flex;
+    justify-content: space-between;
+    color: #2d479a;
+    font-weight: 700;
+  }
+
+  #projetos .mob-card-tech {
+    border-bottom: 1px solid #185fa5;
+  }
+
+  #contato a {
+    font-weight: 600;
+  }
+}
+
+.projetos-mobile {
+  display: none;
+}
+
+/* ======== COMANDO GERAL ========*/
+
 html {
   scroll-behavior: smooth;
 }
